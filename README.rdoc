@@ -10,5 +10,6 @@
 
 * How to run the test suite => <tt>rake test</tt>
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Note: A customer need not have an account to view the appointments.
+        A link to scheduled appointments is shown on login page for customers to view all appointments.
+        
