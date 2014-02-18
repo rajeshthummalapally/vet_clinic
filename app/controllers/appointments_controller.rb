@@ -1,4 +1,6 @@
 class AppointmentsController < ApplicationController
+  skip_before_filter :authorize_user!, only: [:index]
+  before_filter :ensure_user_can_manage_appointments, only: [:new, :edit, :update, :create, :destroy]
   before_action :set_pets
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
@@ -62,5 +64,12 @@ class AppointmentsController < ApplicationController
 
    def set_pets
      @pets = Pet.all
+   end
+
+   def ensure_user_can_manage_appointments
+      unless current_user.receptionist?
+        flash[:notice] = "You do not have proper permissions"
+	redirect_to appointments_path unless current_user.receptionist?
+      end
    end
 end

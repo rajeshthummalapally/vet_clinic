@@ -8,4 +8,29 @@ class User < ActiveRecord::Base
   validates :name, length: { in: 3..35 }
   validates :zip, length: { maximum: 5 }
   validates :years_in_practice, inclusion: { in: (1..100).to_a }
+
+  before_validation :set_password, on: :create
+
+  def admin?
+    role? 'admin'
+  end
+
+  def doctor?
+    role? 'doctor'
+  end
+
+  def receptionist?
+    role? 'receptionist'
+  end
+
+  def role? name
+    role == name
+  end
+  
+
+  private
+  def set_password
+    self.password = 'welcome123'
+  end
+
 end

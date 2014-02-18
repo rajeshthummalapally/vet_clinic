@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+  before_filter :ensure_user_can_manage_pets
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   # GET /pets
@@ -70,5 +71,12 @@ class PetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
       params.require(:pet).permit(:name, :pet_type, :breed, :age, :weight, :date_last_visit)
+    end
+
+    def ensure_user_can_manage_pets
+      unless current_user.admin? || current_user.doctor?
+        flash[:notice] = "You do not have permissions."
+        redirect_to appointments_path
+      end
     end
 end
