@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  skip_before_filter :authorize_user!, only: [:index]
+  skip_before_filter :authenticate_user!, only: [:index]
   before_filter :ensure_user_can_manage_appointments, only: [:new, :edit, :update, :create, :destroy]
   before_action :set_pets
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
