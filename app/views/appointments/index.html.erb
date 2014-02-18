@@ -13,6 +13,8 @@
     <tr>
       <th>Date of visit</th>
       <th>Customer</th>
+      <th>Pet</th>
+      <th>Doctor</th>
       <th>Requires reminder</th>
       <th>Reason for visit</th>
       <th></th>
@@ -26,6 +28,8 @@
       <tr>
         <td><%= appointment.date_of_visit %></td>
         <td><%= appointment.customer %></td>
+        <td><%= appointment.pet.name%></td>
+        <td><%= appointment.user.name%></td>
         <td><%= appointment.requires_reminder %></td>
         <td><%= appointment.reason_for_visit %></td>
         <td><%= link_to 'Show', appointment %></td>

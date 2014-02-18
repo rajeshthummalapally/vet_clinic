@@ -23,6 +23,9 @@
     <%= f.text_field :customer %>
   </div>
   <div class="field">
+    <%= f.select :user_id, doctors_list, prompt: 'Select Doctor' %>
+  </div>
+  <div class="field">
     <%= f.label :requires_reminder %><br>
     <%= f.check_box :requires_reminder %>
   </div>

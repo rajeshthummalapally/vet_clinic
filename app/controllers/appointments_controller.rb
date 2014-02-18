@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.all.includes(:user, :pet)
   end
 
   def show
@@ -67,7 +67,7 @@ class AppointmentsController < ApplicationController
    end
 
    def ensure_user_can_manage_appointments
-      unless current_user.receptionist?
+      unless current_user.receptionist? || current_user.admin?
         flash[:notice] = "You do not have proper permissions"
 	redirect_to appointments_path unless current_user.receptionist?
       end

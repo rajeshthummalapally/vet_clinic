@@ -26,3 +26,16 @@ doctor_robert:
   years_in_practice: 8
   role: "doctor"
   
+receptionist_beth:
+  email: 'Beth@example.com'
+  encrypted_password: '$2a$10$3OF9YyLG6D8P8EqFFdudmeIUtIlnX2usIFYhAJ77pep5y93BLuSuu' #welcome
+  name: 'Beth Smith'
+  title: 'VP'
+  reset_password_token: 3z2FwFstLXyBHzRmoGHj 
+  address: "1010 somewhere street"
+  city: "Gaithersburg"
+  state: "MD"
+  zip: 28272
+  school: ""
+  years_in_practice: 1
+  role: "receptionist"

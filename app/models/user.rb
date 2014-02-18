@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   before_validation :set_password, on: :create
 
+  scope :doctors, -> { where(role: 'doctor') }
+
   def admin?
     role? 'admin'
   end

@@ -3,6 +3,7 @@ require 'test_helper'
 class PetsControllerTest < ActionController::TestCase
   setup do
     @pet = pets(:bella)
+    sign_in(users(:admin))
   end
 
   test "should get index" do

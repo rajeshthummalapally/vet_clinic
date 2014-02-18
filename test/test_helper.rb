@@ -13,3 +13,13 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+
+  def assert_object_properties_equal_hash(properties, object, hash)
+    properties.each do |property|
+      assert_equal object.send(property), hash[property.to_s]
+    end
+  end
+end
