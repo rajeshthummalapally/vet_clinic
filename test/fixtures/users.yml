@@ -1,0 +1,14 @@
+admin:
+  email: 'admin@example.com'
+  encrypted_password: '$2a$10$3OF9YyLG6D8P8EqFFdudmeIUtIlnX2usIFYhAJ77pep5y93BLuSuu' #welcome
+  name: 'Admin User'
+  title: 'Dr'
+  reset_password_token: 5h632xrnASqFanDhKQsB8
+  address: "1010 somewhere street"
+  city: "Gaithersburg"
+  state: "MD"
+  zip: 28272
+  school: "Syracuse University"
+  years_in_practice: 12
+  role: "admin"
+  
