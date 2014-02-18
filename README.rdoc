@@ -6,10 +6,11 @@
 
 * Run <tt>rake setup</tt> to create the database, run migrations, create dummy data.
 
-* Note: All users created are given a password 'welcome123' by default
-
 * How to run the test suite => <tt>rake test</tt>
 
-* Note: A customer need not have an account to view the appointments.
-        A link to scheduled appointments is shown on login page for customers to view all appointments.
+* Note: All users created are given a password 'welcome123' by default.
+
+* Assumptions: A customer need not have an account to view the appointments.
+
+* Note: A link to scheduled appointments is shown on login page for customers to view all appointments.
         
