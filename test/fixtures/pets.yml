@@ -1,0 +1,15 @@
+bella:
+  name: bella
+  pet_type: dog
+  breed: poodle
+  age: 1
+  weight: 4lbs
+  date_last_visit: 2014-02-18 08:55:01
+
+tommy:  
+  name: tommy
+  pet_type: dog
+  breed: boxer
+  age: 3
+  weight: 20lbs
+  date_last_visit: 2014-02-18 08:55:01
