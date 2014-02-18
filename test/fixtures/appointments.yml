@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+bella_appointment:
+  date_of_visit: 2014-02-13 08:35:01
+  pet: bella
+  customer: John Doe
+  user: admin
+  requires_reminder: false
+  reason_for_visit: Bella hurt her leg
+
+tommy_appointment:
+  date_of_visit: 2014-02-13 08:35:01
+  pet: tommy
+  user: admin
+  customer: Jane Doe
+  requires_reminder: true
+  reason_for_visit: Tommy not feeling well
